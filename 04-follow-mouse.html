@@ -24,8 +24,8 @@
 
 				var dx = mouse.x - arrow.x,
 					dy = mouse.y - arrow.y,
-					angle = Math.atan2(dy, dx);
-					vx = Math.cos(angle) * speed;
+					angle = Math.atan2(dy, dx),
+					vx = Math.cos(angle) * speed,
 					vy = Math.sin(angle) * speed;
 
 				arrow.rotation = angle;
