@@ -12,7 +12,7 @@ function Ball(radius, color){
 	this.scaleY = 1;
 	this.color = utils.parseColor(color);
 	this.lineWidth = 1;
-}
+};
 
 Ball.prototype.draw = function(context){
 	context.save();
@@ -29,4 +29,13 @@ Ball.prototype.draw = function(context){
 		context.stroke();
 	}
 	context.restore();
+};
+
+Ball.prototype.getBounds = function(){
+	return {
+		x: this.x - this.radius,
+		y: this.y - this.radius,
+		width: this.radius * 2,
+		height: this.radius * 2
+	};
 }
