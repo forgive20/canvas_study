@@ -97,3 +97,7 @@ utils.parseColor = function(color, toNumber){
 utils.containsPoint = function(rect, x, y){
 	return !(x < rect.x || x > rect.x + rect.width || y < rect.y || y > rect.y + rect.height);
 };
+
+if(!window.cancelRequestAnimationFrame){
+	window.cancelRequestAnimationFrame = (window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || window.oCancelAnimationFrame || window.msCancelAnimationFrame || window.clearTimeout);
+}
